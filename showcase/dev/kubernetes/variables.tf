@@ -15,3 +15,11 @@ variable "region" {
 variable "project_name" {
   type = string
 }
+
+variable "dockerconfig_json_base64_encoded" {
+  type = string
+}
+
+variable "argocd_github_access_token" {
+  type = string
+}
