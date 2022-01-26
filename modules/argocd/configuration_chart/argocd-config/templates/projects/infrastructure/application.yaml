@@ -19,7 +19,7 @@ spec:
   source:
     path: {{ tpl $project.path . }}
     repoURL: {{ $project.repoUrl }}
-    targetRevision: working
+    targetRevision: main
     helm:
       valueFiles:
         - values.yaml
