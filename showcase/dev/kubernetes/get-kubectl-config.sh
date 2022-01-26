@@ -18,3 +18,9 @@ cat secrets.json | jq -r ."kubectlConfig" > ~/.kube/config || true
 # Get ELB ID
 elbID=$(cat secrets.json | jq -r ."elbId")
 echo "ELB-ID: $elbID"
+
+# Get ELB IP
+elbPublicIp=$(cat secrets.json | jq -r ."elbPublicIp")
+echo "ELB-PUBLIC-IP: $elbPublicIp"
+
+rm secrets.json
