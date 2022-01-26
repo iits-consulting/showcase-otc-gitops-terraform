@@ -5,11 +5,9 @@ provider "opentelekomcloud" {
 
 provider "kubernetes" {
   host               = local.stage_secrets["kubernetesEndpoint"]
-  load_config_file   = "false"
   client_certificate = local.stage_secrets["kubernetesClientCertificate"]
   client_key         = local.stage_secrets["kubernetesClientKey"]
   insecure           = true
-  config_context_cluster = var.stage_name
 }
 
 provider "helm" {
@@ -18,6 +16,5 @@ provider "helm" {
     client_certificate = local.stage_secrets["kubernetesClientCertificate"]
     client_key         = local.stage_secrets["kubernetesClientKey"]
     insecure           = true
-    config_context_cluster = var.stage_name
   }
 }
