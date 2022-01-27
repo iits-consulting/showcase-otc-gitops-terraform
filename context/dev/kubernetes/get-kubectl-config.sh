@@ -2,7 +2,7 @@
 LANG=en_us_88591
 
 BUCKET_NAME=${TF_VAR_context_name}-${TF_VAR_stage_name}-stage-secrets
-path="/stage-secrets"
+path="/terraform-secrets"
 current_date=$(date +'%a, %d %b %Y %H:%M:%S %z')
 request_string="GET\n\n\n${current_date}\n/${BUCKET_NAME}${path}"
 echo -en "${request_string}"

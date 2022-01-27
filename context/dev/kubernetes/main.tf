@@ -1,6 +1,6 @@
 data "opentelekomcloud_obs_bucket_object" "stage_secrets" {
   bucket = "${var.context_name}-${var.stage_name}-stage-secrets"
-  key    = "stage-secrets"
+  key    = "terraform-secrets"
 }
 
 locals {

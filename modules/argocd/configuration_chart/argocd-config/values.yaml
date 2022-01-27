@@ -1,9 +1,9 @@
 hostPrefixRegex: "HostRegexp(`{host:admin.+}`)"
 stage: ${STAGE}
 infrastructure:
-  name: "infrastructure-charts"
-  repoUrl: 'https://github.com/iits-consulting/showcase-otc-infrastructure-charts.git'
-  path: stages/${STAGE}/infrastructure-charts
+  name: "infrastructure-charts" #TODO REPLACE_ME
+  repoUrl: 'https://github.com/iits-consulting/infrastructure-charts.git' #TODO REPLACE_ME
+  path: stages/${STAGE}/infrastructure-charts #TODO REPLACE_ME
   gitToken:
     name: "terraform"
     password: ${ARGOCD_GITHUB_ACCESS_TOKEN}

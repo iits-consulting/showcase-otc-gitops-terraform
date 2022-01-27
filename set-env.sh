@@ -1,11 +1,10 @@
 # Either your ACCESS_KEY and SECRET_KEY or from a serviceaccount
-
-export OS_ACCESS_KEY=$(vault kv get --field access_key secret/otc_credentials/playground)
-export OS_SECRET_KEY=$(vault kv get --field secret_key secret/otc_credentials/playground)
+export OS_ACCESS_KEY="REPLACE_ME"
+export OS_SECRET_KEY="REPLACE_ME"
 export AWS_ACCESS_KEY_ID=$OS_ACCESS_KEY
 export AWS_SECRET_ACCESS_KEY=$OS_SECRET_KEY
 
-export OS_DOMAIN_NAME="OTC-EU-DE-00000000001000055571"
+export OS_DOMAIN_NAME="OTC-EU-DE-REPLACE_ME"
 export OS_PROJECT_NAME="eu-de"
 export TF_VAR_project_name=${OS_PROJECT_NAME}
 
